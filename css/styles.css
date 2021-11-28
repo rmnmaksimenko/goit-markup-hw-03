@@ -30,15 +30,23 @@ li {
 
 /*  - - - - - - - стили разделов  - - - - - - - */
 
+/* - - - Шапка - - - */
+
+.header {
+  margin-bottom: 0;
+}
+
 /* - - - раздел "заказать услугу" - - - */
 
 .service-section {
   background-color: var(--color-background-second);
+  margin-bottom: 94px;
 }
 
 /* - - - раздел "зачем выбирать нас" - - - */
 
 .why-us-section {
+  margin-bottom: 94px;
 }
 
 .why-us-title {
@@ -61,6 +69,7 @@ li {
 /* - - - раздел "чем мы занимаемся" - - - */
 
 .our-work-section {
+  margin-bottom: 94px;
 }
 
 .our-work-list {
@@ -70,6 +79,8 @@ li {
 /* - - - раздел "наша команда" - - - */
 .our-team-section {
   background-color: var(--color-background-third);
+  margin-bottom: 94px;
+  padding-top: 94px;
 }
 
 .our-team-list {
@@ -77,6 +88,11 @@ li {
 }
 
 .our-team-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.our-team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
@@ -114,6 +130,8 @@ li {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-top: 0%;
+  margin-bottom: 0;
 }
 
 /* стиль вторых заголовков */
@@ -142,8 +160,6 @@ li {
   border-style: none;
   color: var(--color-fifth);
   background-color: var(--color-fourth);
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .service-button:hover,
