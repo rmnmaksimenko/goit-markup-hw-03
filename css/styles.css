@@ -105,6 +105,14 @@ li {
   letter-spacing: 0.03em;
 }
 
+.our-team-block {
+  width: 270px;
+  min-height: 368px;
+  margin-bottom: 30px;
+  background-color: var(--color-background-main);
+  /* outline: 2px solid tomato; */
+}
+
 /* - - - контакты (футер) - - - */
 
 .contacts-footer {
@@ -280,15 +288,14 @@ li {
   color: var(--color-title);
 }
 
+/* - - - сортировочные кнопки - - - */
+
 /* список кнопок */
 .portfolio-nav-list {
   margin-bottom: 50px;
 }
 
-/* список работ */
-.portfolio-list {
-  margin-bottom: 94px;
-}
+/* стиль кнопок */
 
 .portfolio-nav-button {
   font-family: inherit, sans-serif;
@@ -308,15 +315,39 @@ li {
   border-radius: 4px;
 }
 
+/* наведение на кнопки */
+
 .portfolio-nav-button:hover,
 .portfolio-nav-button:focus {
   background-color: var(--color-fourth);
   color: var(--color-fifth);
 }
 
+/* - - - Примеры работ - - - */
+
+/* список работ */
+.portfolio-list {
+  margin-bottom: 94px;
+}
+
+/* карточки работ */
+
+.portfolio-block {
+
+  drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border: 1px solid #EEEEEE;
+  width: 370px;
+  margin-bottom: 30px;
+}
+
+/* картинки */
+
 .portfolio-picture {
   margin-bottom: 20px;
 }
+
+/* заголовок работ */
 
 .portfolio-list-title {
   font-size: 18px;
@@ -325,13 +356,18 @@ li {
   letter-spacing: 0.06em;
   color: var(--color-title);
   margin-top: 0;
+  margin-left: 24px;
   margin-bottom: 4px;
 }
+
+/* описание работ */
+
 .portfolio-list-paragraph {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--color-main);
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-left: 24px;
+  margin-bottom: 4px;
 }
