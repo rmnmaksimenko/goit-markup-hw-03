@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- шапка -->
-    <header class="container header">
+    <header class="container">
       <!-- навагация -->
       <nav>
         <!-- логотип / главная страница-->
@@ -34,12 +34,12 @@
       </nav>
       <!-- почта и телефон -->
       <ul class="mail-phone-list">
-        <li>
+        <li class="mail-phone-list-element">
           <a href="mailto:info@devstudio.com" class="mail-phone-link link-backlight"
             >info@devstudio.com</a
           >
         </li>
-        <li>
+        <li class="mail-phone-list-element">
           <a href="tel:+380961111111" class="mail-phone-link link-backlight">+38 096 111 11 11</a>
         </li>
       </ul>
@@ -86,12 +86,18 @@
       <!-- раздел чем мы занимаемся -->
       <section class="our-work-section">
         <!-- заголовок -->
-        <h2 class="title title-second">Чем мы занимаемся</h2>
+        <h2 class="title title-second our-work-title">Чем мы занимаемся</h2>
         <!-- фото -->
         <ul class="our-work-list">
-          <li><img src="./images/box-1.jpg" alt="Опытные специалисты" width="370" /></li>
-          <li><img src="./images/box-2.jpg" alt="Современный дизайн" width="370" /></li>
-          <li><img src="./images/box-3.jpg" alt="Работа художников" width="370" /></li>
+          <li class="our-work-block">
+            <img src="./images/box-1.jpg" alt="Опытные специалисты" width="370" />
+          </li>
+          <li class="our-work-block">
+            <img src="./images/box-2.jpg" alt="Современный дизайн" width="370" />
+          </li>
+          <li class="our-work-block">
+            <img src="./images/box-3.jpg" alt="Работа художников" width="370" />
+          </li>
         </ul>
       </section>
 
@@ -124,11 +130,11 @@
     </main>
 
     <!-- футер / контакты -->
-    <footer class="container contacts-footer">
+    <footer class="container">
       <!-- раздел контакты -->
 
       <!-- лого -->
-      <a href="./index.html" class="logo-link link-backlight"
+      <a href="./index.html" class="logo-link logo-footer link-backlight"
         >Web<span class="logo-link-light">Studio</span></a
       >
       <!-- контакты -->

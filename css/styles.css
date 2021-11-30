@@ -9,6 +9,9 @@
   --color-background-main: #fff;
   --color-background-second: #2f303a;
   --color-background-third: #f5f4fa;
+  --section-padding: 94px;
+  --grid-width: 70px;
+  --grit-indent: 30px;
 }
 
 /* - - - - - - - главный стиль документа - - - - - - - */
@@ -18,40 +21,80 @@ body {
   color: var(--color-main);
 }
 
+* {
+  /* outline: 2px solid tomato; */
+}
+
+h1,
+h2,
+h3,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 li {
   list-style: none;
 }
 
 .container {
-  width: 1185px;
+  width: 1170px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+section {
+  margin-bottom: var(--section-padding);
 }
 
 /*  - - - - - - - стили разделов  - - - - - - - */
 
 /* - - - Шапка - - - */
 
-.header {
+header {
   margin-bottom: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: rgb(127, 243, 252); */
 }
 
+nav {
+  display: flex;
+  align-items: center;
+}
 /* - - - раздел "заказать услугу" - - - */
 
 .service-section {
   background-color: var(--color-background-second);
-  margin-bottom: 94px;
+  /* margin-bottom: 94px; */
 }
 
 /* - - - раздел "зачем выбирать нас" - - - */
 
 .why-us-section {
-  margin-bottom: 94px;
+  /* margin-bottom: 94px; */
+}
+
+.why-us-list {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .why-us-block {
-  width: 270px;
+  /* width: 270px; */
+  flex-basis: calc((100% + var(--grit-indent)) / 4 - var(--grit-indent));
+  padding-right: var(--grit-indent);
+
   /* outline: 2px solid tomato; */
+}
+
+.why-us-block:nth-child(4n) {
+  padding-right: 0;
 }
 
 .why-us-title {
@@ -61,9 +104,7 @@ li {
   text-transform: uppercase;
 }
 
-.why-us-list {
-  /* list-style: none; */
-}
+/* list-style: none; */
 
 .why-us-paragraph {
   font-size: 14px;
@@ -74,22 +115,41 @@ li {
 /* - - - раздел "чем мы занимаемся" - - - */
 
 .our-work-section {
-  margin-bottom: 94px;
+  /* margin-bottom: 94px; */
 }
 
 .our-work-list {
-  /* list-style: none; */
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.our-work-block {
+  flex-basis: calc((100% + var(--grit-indent)) / 3 - var(--grit-indent));
+  padding-right: var(--grit-indent);
+}
+
+.our-work-block:nth-child(3n) {
+  padding-right: 0;
+}
+
+.our-work-title {
+  margin-bottom: 50px;
 }
 
 /* - - - раздел "наша команда" - - - */
 .our-team-section {
   background-color: var(--color-background-third);
-  margin-bottom: 94px;
+  /* margin-bottom: 94px; */
+  padding-bottom: 94px;
+  margin-bottom: 0;
   padding-top: 94px;
 }
 
 .our-team-list {
-  /* list-style: none; */
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .our-team-title {
@@ -116,15 +176,29 @@ li {
   width: 270px;
   min-height: 368px;
   margin-bottom: 30px;
+  flex-basis: calc((100% + var(--grit-indent)) / 4 - var(--grit-indent));
+  padding-right: var(--grit-indent);
   background-color: var(--color-background-main);
   /* outline: 2px solid tomato; */
 }
 
+.our-team-block:nth-child(4n) {
+  padding-right: 0;
+}
+
 /* - - - контакты (футер) - - - */
 
-.contacts-footer {
+footer {
+  box-sizing: border-box;
   background-color: var(--color-background-second);
+  height: 252px;
+  /* display: flex;
+  flex-direction: column; */
+  padding-top: 60px;
 }
+
+/* .logo-footer {
+} */
 
 /* - - - - - - - заголовки - - - - - - - */
 
@@ -190,6 +264,8 @@ li {
 
 .nav-list {
   /* list-style: none; */
+  display: flex;
+  padding-left: 0;
 }
 
 .nav-link {
@@ -199,6 +275,7 @@ li {
   line-height: 1.142;
   letter-spacing: 0.02em;
   text-decoration: none;
+  padding-right: 50px;
 }
 
 /* .nav-link:focus,
@@ -216,6 +293,7 @@ li {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--color-fourth);
+  padding-right: 94px;
 }
 
 .logo-link-dark {
@@ -237,6 +315,9 @@ li {
 
 .mail-phone-list {
   /* list-style: none; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .mail-phone-link {
@@ -246,6 +327,14 @@ li {
   line-height: 16px;
   letter-spacing: 0.02em;
   text-decoration: none;
+}
+
+.mail-phone-list-element {
+  padding-right: 50px;
+}
+
+.mail-phone-list-element:last-child {
+  padding-right: 0;
 }
 
 /* .mail-phone-link:hover,
@@ -259,6 +348,7 @@ li {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
+  padding-left: 0;
   /* list-style: none; */
 }
 
