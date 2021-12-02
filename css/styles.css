@@ -1,4 +1,5 @@
 /* переменные */
+
 :root {
   --color-main: #757575;
   --color-title: #212121;
@@ -15,6 +16,7 @@
 }
 
 /* - - - - - - - главный стиль документа - - - - - - - */
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--color-background-main);
@@ -35,9 +37,13 @@ ul {
   margin-bottom: 0;
 }
 
+/* общий стиль элементов списков */
+
 li {
   list-style: none;
 }
+
+/* размер страницы */
 
 .container {
   width: 1170px;
@@ -46,6 +52,8 @@ li {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+/* общий стиль секций */
 
 section {
   margin-bottom: var(--section-padding);
@@ -107,8 +115,6 @@ nav {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-
-/* list-style: none; */
 
 .why-us-paragraph {
   font-size: 14px;
@@ -187,7 +193,6 @@ nav {
   flex-basis: calc((100% + var(--grit-indent)) / 4 - var(--grit-indent));
   margin-right: var(--grit-indent);
   background-color: var(--color-background-main);
-  /* outline: 2px solid tomato; */
 }
 
 .our-team-block:nth-child(4n) {
@@ -200,13 +205,8 @@ footer {
   box-sizing: border-box;
   background-color: var(--color-background-second);
   height: 252px;
-  /* display: flex;
-  flex-direction: column; */
   padding-top: 60px;
 }
-
-/* .logo-footer {
-} */
 
 /* - - - - - - - заголовки - - - - - - - */
 
@@ -318,13 +318,6 @@ footer {
 .logo-link-light {
   color: var(--color-fifth);
 }
-
-/* .main-page-link-dark:hover,
-.main-page-link-dark:focus,
-.main-page-link-light:hover,
-.main-page-link-light:focus {
-  color: var(--color-fourth);
-} */
 
 /* почта-телефон в шапке */
 
