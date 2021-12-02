@@ -43,6 +43,10 @@ li {
   list-style: none;
 }
 
+img {
+  display: block;
+}
+
 /* размер страницы */
 
 .container {
