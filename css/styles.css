@@ -26,7 +26,7 @@ body {
 /* контур */
 
 * {
-  /* outline: 2px solid tomato; */
+  outline: 2px solid tomato;
 }
 
 h1,
@@ -122,8 +122,10 @@ nav {
 
 .why-us-paragraph {
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.714;
   letter-spacing: 0.03em;
+  margin-top: 10px;
+  /* margin-bottom: 0; */
 }
 
 /* - - - раздел "чем мы занимаемся" - - - */
