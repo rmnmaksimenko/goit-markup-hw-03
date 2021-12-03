@@ -10,7 +10,6 @@
   --color-background-main: #fff;
   --color-background-second: #2f303a;
   --color-background-third: #f5f4fa;
-  --section-padding: 94px;
   --grid-width: 70px;
   --grit-indent: 30px;
 }
@@ -26,31 +25,47 @@ body {
 /* контур */
 
 * {
-  /* outline: 2px solid tomato; */
+  outline: 2px solid tomato;
 }
 
 h1,
 h2,
 h3,
-ul {
+ul,
+p {
   margin-top: 0;
   margin-bottom: 0;
 }
 
+.hidden-title {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 /* общий стиль элементов списков */
+
+ul {
+  padding: 0;
+  list-style: none;
+}
 
 li {
   list-style: none;
 }
 
 img {
+  max-width: 100%;
   display: block;
+  height: auto;
 }
 
 /* размер страницы */
 
 .container {
-  width: 1170px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -59,15 +74,15 @@ img {
 
 /* общий стиль секций */
 
-section {
-  margin-bottom: var(--section-padding);
+.section {
+  padding: 94px 0;
 }
 
 /*  - - - - - - - стили разделов  - - - - - - - */
 
 /* - - - Шапка - - - */
 
-header {
+.header {
   margin-bottom: 0;
   height: 80px;
   display: flex;
@@ -78,14 +93,41 @@ header {
 
 /* навигация в шапке */
 
-nav {
+.nav {
   display: flex;
   align-items: center;
 }
+
+/* почта-телефон в шапке */
+
+.mail-phone-list {
+  display: flex;
+  padding-inline-start: 0;
+}
+
+.mail-phone-link {
+  color: var(--color-main);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.mail-phone-list-element {
+  margin-right: 50px;
+  margin-left: 0;
+}
+
+.mail-phone-list-element:last-child {
+  margin-right: 0;
+}
+
 /* - - - раздел "заказать услугу" - - - */
 
 .service-section {
   background-color: var(--color-background-second);
+  padding: 200px;
   /* margin-bottom: 94px; */
 }
 
@@ -96,21 +138,19 @@ nav {
 }
 
 .why-us-list {
-  padding-left: 0;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .why-us-block {
   /* width: 270px; */
   flex-basis: calc((100% + var(--grit-indent)) / 4 - var(--grit-indent));
-  padding-right: var(--grit-indent);
+  margin-right: var(--grit-indent);
 
   /* outline: 2px solid tomato; */
 }
 
 .why-us-block:nth-child(4n) {
-  padding-right: 0;
+  margin-right: 0;
 }
 
 .why-us-title {
@@ -132,21 +172,22 @@ nav {
 
 .our-work-section {
   /* margin-bottom: 94px; */
+  padding-top: 0;
 }
 
 .our-work-list {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0;
+  /* padding-left: 0; */
 }
 
 .our-work-block {
   flex-basis: calc((100% + var(--grit-indent)) / 3 - var(--grit-indent));
-  padding-right: var(--grit-indent);
+  margin-right: var(--grit-indent);
 }
 
 .our-work-block:nth-child(3n) {
-  padding-right: 0;
+  margin-right: 0;
 }
 
 .our-work-title {
@@ -156,14 +197,9 @@ nav {
 /* - - - раздел "наша команда" - - - */
 .our-team-section {
   background-color: var(--color-background-third);
-  /* margin-bottom: 94px; */
-  padding-bottom: 94px;
-  margin-bottom: 0;
-  padding-top: 94px;
 }
 
 .our-team-list {
-  padding-left: 0;
   display: flex;
   flex-wrap: wrap;
 }
@@ -179,7 +215,6 @@ nav {
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-align: center;
-  padding-top: 30px;
 }
 
 .our-team-post {
@@ -189,12 +224,14 @@ nav {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 0;
+}
+
+.our-team-container {
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
 .our-team-block {
-  width: 270px;
-  min-height: 368px;
   /* margin-bottom: 30px; */
   flex-basis: calc((100% + var(--grit-indent)) / 4 - var(--grit-indent));
   margin-right: var(--grit-indent);
@@ -207,11 +244,10 @@ nav {
 
 /* - - - контакты (футер) - - - */
 
-footer {
-  box-sizing: border-box;
+.footer {
   background-color: var(--color-background-second);
-  height: 252px;
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* - - - - - - - заголовки - - - - - - - */
@@ -229,7 +265,7 @@ footer {
   color: var(--color-fifth);
   font-weight: 900;
   font-size: 44px;
-  line-height: 1, 4;
+  line-height: 1.363;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -252,23 +288,28 @@ footer {
 /* кнопка "заказать услугу" */
 
 .service-button {
+  margin-top: 30px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 32px;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
   border-style: none;
   color: var(--color-fifth);
   background-color: var(--color-fourth);
+  border-radius: 4px;
 }
 
 .service-button:hover,
 .service-button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
   border-style: none;
 }
 
@@ -277,16 +318,14 @@ footer {
 /* навигационные ссылки */
 
 .nav-list {
-  /* list-style: none; */
   display: flex;
-  padding-left: 0;
 }
 
-.nav-list > li {
+.nav-item {
   margin-right: 50px;
 }
 
-.nav-list > li:last-child {
+.nav-item:last-child {
   margin-right: 0;
 }
 
@@ -314,7 +353,7 @@ footer {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--color-fourth);
-  padding-right: 94px;
+  margin-right: 94px;
 }
 
 .logo-link-dark {
@@ -325,32 +364,6 @@ footer {
   color: var(--color-fifth);
 }
 
-/* почта-телефон в шапке */
-
-.mail-phone-list {
-  /* list-style: none; */
-  display: flex;
-  padding-inline-start: 0;
-}
-
-.mail-phone-link {
-  color: var(--color-main);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-}
-
-.mail-phone-list-element {
-  margin-right: 50px;
-  margin-left: 0;
-}
-
-.mail-phone-list-element:last-child {
-  margin-right: 0;
-}
-
 /* .mail-phone-link:hover,
 .mail-phone-link:focus {
   color: var(--color-fourth);
@@ -359,11 +372,10 @@ footer {
 /* стиль контактов */
 
 .contacts-list {
+  margin-top: 20px;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-  padding-left: 0;
-  /* list-style: none; */
 }
 
 .map-address-link {
@@ -376,6 +388,10 @@ footer {
   font-style: normal;
   color: var(--color-fifth-transparent);
   text-decoration: none;
+}
+
+.contacts-block {
+  margin-bottom: 9px;
 }
 
 .phone-contacts-link {
@@ -394,17 +410,15 @@ footer {
 /* главный заголовок */
 
 .portfolio-main-title {
-  padding-top: 94px;
-  margin-bottom: 50px;
-  color: var(--color-title);
 }
+
+/* контейнер портфолио */
 
 /* - - - сортировочные кнопки - - - */
 
 /* список кнопок */
 .portfolio-nav-list {
   display: flex;
-  flex-direction: row;
   margin-bottom: 50px;
   justify-content: center;
 }
@@ -424,9 +438,9 @@ footer {
   background-color: var(--color-background-third);
   color: var(--color-title);
   padding: 6px 22px;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+}
+
+.portfolio-nav-block:not(last-child) {
   margin-right: 8px;
 }
 
@@ -436,14 +450,15 @@ footer {
 .portfolio-nav-button:focus {
   background-color: var(--color-fourth);
   color: var(--color-fifth);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* - - - Примеры работ - - - */
 
 /* список работ */
 .portfolio-list {
-  margin-bottom: 94px;
-  padding-left: 0;
   /* display: inline-block; */
   display: flex;
   flex-wrap: wrap;
@@ -451,19 +466,21 @@ footer {
 
 /* карточки работ */
 
+.portfolio-list-container {
+  padding: 20px 24px;
+}
+
 .portfolio-block {
-  box-sizing: border-box;
-  max-width: 370px;
+  /* max-width: 370px; */
   flex-basis: calc((100% + var(--grit-indent)) / 3 - var(--grit-indent));
   margin-right: var(--grit-indent);
-  box-shadow: 0px 4px 4px 0px #00000040;
-  border: 1px solid #eeeeee;
+  /* box-shadow: 0px 4px 4px 0px #00000040;
+  border: 1px solid #eeeeee; */
 
   margin-bottom: 30px;
 }
 
 .portfolio-block:nth-child(3n) {
-  padding-right: 0;
   margin-right: 0;
 }
 
@@ -474,7 +491,7 @@ footer {
 /* картинки */
 
 .portfolio-picture {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 /* заголовок работ */
@@ -485,8 +502,6 @@ footer {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--color-title);
-  margin-top: 0;
-  margin-left: 24px;
   margin-bottom: 4px;
 }
 
@@ -497,7 +512,4 @@ footer {
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--color-main);
-  margin-top: 0;
-  margin-left: 24px;
-  margin-bottom: 20px;
 }
