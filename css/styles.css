@@ -26,7 +26,7 @@ body {
 /* контур */
 
 * {
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
 h1,
