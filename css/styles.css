@@ -102,7 +102,6 @@ img {
 
 .mail-phone-list {
   display: flex;
-  padding-inline-start: 0;
 }
 
 .mail-phone-link {
@@ -127,14 +126,13 @@ img {
 
 .service-section {
   background-color: var(--color-background-second);
-  padding: 200px;
-  /* margin-bottom: 94px; */
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 /* - - - раздел "зачем выбирать нас" - - - */
 
 .why-us-section {
-  /* margin-bottom: 94px; */
 }
 
 .why-us-list {
@@ -158,13 +156,13 @@ img {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .why-us-paragraph {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-  margin-top: 10px;
   /* margin-bottom: 0; */
 }
 
@@ -178,7 +176,6 @@ img {
 .our-work-list {
   display: flex;
   flex-wrap: wrap;
-  /* padding-left: 0; */
 }
 
 .our-work-block {
@@ -364,6 +361,10 @@ img {
   color: var(--color-fifth);
 }
 
+.logo-footer {
+  margin-right: 0;
+}
+
 /* .mail-phone-link:hover,
 .mail-phone-link:focus {
   color: var(--color-fourth);
@@ -492,7 +493,6 @@ img {
 /* картинки */
 
 .portfolio-picture {
-  /* margin-bottom: 20px; */
 }
 
 /* заголовок работ */
@@ -503,7 +503,6 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--color-title);
-  margin-bottom: 4px;
 }
 
 /* описание работ */
