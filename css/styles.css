@@ -87,8 +87,12 @@ img {
   height: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  border-bottom: 1px solid #ececec;
   /* background-color: rgb(127, 243, 252); */
+}
+
+.container-header {
+  display: flex;
 }
 
 /* навигация в шапке */
@@ -102,6 +106,7 @@ img {
 
 .mail-phone-list {
   display: flex;
+  margin-left: auto;
 }
 
 .mail-phone-link {
@@ -187,10 +192,6 @@ img {
   margin-right: 0;
 }
 
-.our-work-title {
-  margin-bottom: 50px;
-}
-
 /* - - - раздел "наша команда" - - - */
 .our-team-section {
   background-color: var(--color-background-third);
@@ -199,11 +200,6 @@ img {
 .our-team-list {
   display: flex;
   flex-wrap: wrap;
-}
-
-.our-team-title {
-  margin-top: 0;
-  margin-bottom: 50px;
 }
 
 .our-team-name {
@@ -278,6 +274,8 @@ img {
   line-height: 1.167;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  color: var(--color-title);
 }
 
 /* - - - - - - - кнопки - - - - - - - */
@@ -372,8 +370,11 @@ img {
 
 /* стиль контактов */
 
-.contacts-list {
+.address {
   margin-top: 20px;
+}
+
+.contacts-list {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
@@ -391,7 +392,7 @@ img {
   text-decoration: none;
 }
 
-.contacts-block {
+.contacts-block:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -407,11 +408,6 @@ img {
 }
 
 /* - - - - - - - Портфолио - - - - - - - */
-
-/* главный заголовок */
-
-.portfolio-main-title {
-}
 
 /* контейнер портфолио */
 
@@ -441,7 +437,7 @@ img {
   padding: 6px 22px;
 }
 
-.portfolio-nav-block:not(last-child) {
+.portfolio-nav-block:not(:last-child) {
   margin-right: 8px;
 }
 
